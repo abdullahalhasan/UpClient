@@ -9,26 +9,75 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/musicButton"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:layout_height="250dp"
-            android:text="Music"
-            android:onClick="goToMusic"/>
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="wrap_content"
+            android:text="Pronounciations"
+            />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/phraseButton"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:layout_height="250dp"
-            android:text="Words"
+            android:layout_height="wrap_content"
+            android:text="Phrases"
             android:onClick="goToWords"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <AutoCompleteTextView
+            android:id="@+id/musicAutoComp"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.SearchView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <ListView
+        android:layout_margin="10dp"
+        android:id="@+id/musivListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_weight=".5"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:onClick="pauseMusic"
+            android:text="Pause"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_weight=".5"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:onClick="stopMusic"
+            android:text="Stop"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </LinearLayout>

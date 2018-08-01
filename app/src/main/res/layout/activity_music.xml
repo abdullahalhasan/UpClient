@@ -9,9 +9,32 @@
     tools:context="com.droidsoftbd.upclient.MusicActivity">
 
     <ListView
-        android:id="@+id/musivListView"
+        android:id="@+id/musivistView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="9">
+
 
     </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_weight=".5"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:onClick="pauseMusic"
+            android:text="Pause"
+            android:layout_height="match_parent" />
+        <Button
+            android:layout_weight=".5"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:onClick="stopMusic"
+            android:text="Stop"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 </LinearLayout>
